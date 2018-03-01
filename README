@@ -1,0 +1,31 @@
+/*
+Yuhang Xu
+CIS*3110
+Xining Li
+A2
+Feb.27.2017
+*/
+
+Compile and running:
+to compile type 'make'
+THen it will generate the executable program.
+Notice that in the Makefile, I use g++-5 as the compiler.
+If your system doesn't have gcc-5 but has a gcc with higher 
+than 5 version, you can replace the g++-5 to g++ in the Makefile.
+
+After you generated the simcpu file, you can run the program like this:
+
+./simcpu [-d] [-v] [-r quantum] < input_file
+
+
+Question Answers:
+
+I/II) My simulator does include a switch overhead time for every new thread, regardless of order, it does
+not implement running to idle states. This was done because I assumed that for every time there is a
+thread switch, it shouldn't matter when the thread comes in the queues
+III) My simulator does not compensate for switching from blocked to ready queues
+IV) My simulation does not accurately report switching from an interrupted state, to a highest priority
+either.
+
+
+* My program can run even with the comment in testfile
